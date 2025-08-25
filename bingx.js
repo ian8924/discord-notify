@@ -74,6 +74,8 @@ async function fetchAndSendPrice() {
     const btc = await fetchBingXPrice("BTC_USDT");
     const eth = await fetchBingXPrice("ETH_USDT");
 
+    console.log("test checkPricePump");
+
     // 檢查價格跳漲
     await checkPricePump("BTC", "BTC_USDT", btc);
     await checkPricePump("ETH", "ETH_USDT", eth);
